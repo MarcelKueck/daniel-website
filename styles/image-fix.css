@@ -1,0 +1,78 @@
+/* Styling for image loading and error states */
+
+/* Loading indicator for before/after sliders */
+.slider-loading-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 5;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(24, 74, 44, 0.2);
+    border-top: 4px solid var(--primary-dark-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style for failed image loading */
+.image-load-failed {
+    min-height: 200px;
+    background-color: var(--primary-light-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-style: italic;
+}
+
+/* Make sure before/after containers maintain proper height even without images */
+.before-after-container {
+    min-height: 250px;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+/* Ensure labels are visible even when images fail */
+.before-image .label,
+.after-image .label {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 6;
+}
+
+/* Fix for slider handle to make it more visible */
+.slider-handle {
+    background-color: white !important;
+    width: 6px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.slider-handle::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Make the before/after containers responsive */
+@media (max-width: 768px) {
+    .before-after-container {
+        min-height: 180px;
+    }
+}

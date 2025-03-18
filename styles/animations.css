@@ -1,0 +1,384 @@
+/* === ANIMATION UTILITY CLASSES === */
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide in animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Scale animations */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Rotation animations */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-10deg) scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Count up animation for stats */
+@keyframes countUp {
+    from {
+        content: "0";
+    }
+
+    to {
+        content: attr(data-count);
+    }
+}
+
+/* Utility classes for animations */
+.fade-in {
+    opacity: 0;
+}
+
+.slide-in {
+    opacity: 0;
+}
+
+.scale-in {
+    opacity: 0;
+}
+
+.rotate-in {
+    opacity: 0;
+}
+
+/* Delay classes */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+/* Animation active states - applied by JavaScript */
+.fade-in.animate {
+    animation: fadeIn 1s forwards;
+}
+
+.slide-in.animate {
+    animation: slideInFromBottom 1s forwards;
+}
+
+.slide-left.animate {
+    animation: slideInFromLeft 1s forwards;
+}
+
+.slide-right.animate {
+    animation: slideInFromRight 1s forwards;
+}
+
+.scale-in.animate {
+    animation: scaleIn 1s forwards;
+}
+
+.rotate-in.animate {
+    animation: rotateIn 1s forwards;
+}
+
+/* === SCROLL-TRIGGERED ANIMATIONS === */
+
+/* Reveal content on scroll */
+.reveal-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reveal cards with delay */
+.reveal-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-card.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.reveal-card.delay-2 {
+    transition-delay: 0.4s;
+}
+
+/* Parallax effects */
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-background {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* === SPECIFIC SECTION ANIMATIONS === */
+
+/* Hero section animations */
+.hero-section .hero-content h2 {
+    animation: slideInFromBottom 1s forwards;
+    animation-delay: calc(var(--index) * 0.2s);
+    opacity: 0;
+}
+
+.hero-section .cta-button {
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+/* Service cards hover effect */
+.service-card .card-inner {
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-card:hover .card-inner {
+    transform: rotateY(180deg) scale(1.02);
+}
+
+/* Equipment slider animation */
+.equipment-slider {
+    transition: transform 0.5s ease;
+}
+
+/* Before/After slider animation */
+.before-after-container .slider-handle {
+    transition: left 0.3s ease;
+}
+
+.before-after-container .after-image {
+    transition: width 0.3s ease;
+}
+
+/* Process timeline animation */
+.process-timeline::before {
+    height: 0;
+    transition: height 1.5s ease;
+}
+
+.process-timeline.active::before {
+    height: 100%;
+}
+
+.process-step .step-number {
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    transition-delay: calc(var(--index) * 0.2s);
+}
+
+.process-step.active .step-number {
+    transform: scale(1);
+}
+
+.process-step .step-content {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: calc(var(--index) * 0.2s + 0.2s);
+}
+
+.process-step.active .step-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stats counter animation */
+.stat-number {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-number.counting::after {
+    content: '';
+    animation: countUp 2s forwards;
+    animation-timing-function: linear;
+}
+
+/* Service category hover animation */
+.service-category {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* 3D button hover effect */
+.cta-button {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+    transform: translateY(-1px) scale(1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Apple-style scroll parallax effects */
+.scroll-parallax {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Sticky header effect */
+.main-header {
+    transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile menu animation */
+.mobile-nav-toggle span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-nav-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-nav-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Tab switching animation */
+.portfolio-grid {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.portfolio-grid.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Horizontal scroll reveal */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.horizontal-scroll-item {
+    flex: 0 0 auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Fade in sequence */
+.fade-sequence>* {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-sequence.active>* {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--index) * 0.1s);
+}

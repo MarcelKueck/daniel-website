@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baumfällung Partsch Junior | Baumpflege-Spezialisten</title>
+    <meta name="description"
+        content="Bayerns führender Baumspezialist bietet präzise Baumfällung, Pflege und Wartungsdienste mit Engagement für Umweltverantwortung.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/image-fix.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <h1>Baumfällung Partsch Junior</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">Über uns</a></li>
+                <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+                <li><a href="#services" data-i18n="nav_services">Leistungen</a></li>
+                <li><a href="#process" data-i18n="nav_process">Arbeitsweise</a></li>
+                <li><a href="#clients" data-i18n="nav_clients">Kunden</a></li>
+                <li><a href="#resources" data-i18n="nav_resources">Ressourcen</a></li>
+                <li><a href="#sustainability" data-i18n="nav_sustainability">Nachhaltigkeit</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="language-switch">
+            <button id="language-toggle" class="language-toggle-btn">EN</button>
+        </div>
+        <div class="mobile-nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="video-background">
+                <video autoplay muted loop>
+                    <source src="#" type="video/mp4" id="hero-video">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hero-content reveal-content">
+                <h2 class="slide-in fade-in" data-i18n="hero_title_1">Bayerische Präzision</h2>
+                <h2 class="slide-in fade-in delay-1" data-i18n="hero_title_2">Umweltbewusstsein</h2>
+                <h2 class="slide-in fade-in delay-2" data-i18n="hero_title_3">Familientradition</h2>
+                <a href="#contact" class="cta-button" data-i18n="cta_assessment">Baumbegutachtung anfragen</a>
+            </div>
+            <div class="scroll-indicator">
+                <span data-i18n="scroll_indicator">Scrollen Sie, um mehr zu erfahren</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Service Focus -->
+        <section class="service-focus">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="expertise_title">Unsere Expertise</h2>
+                <p data-i18n="expertise_subtitle">Spezialisierte Baumpflegeleistungen für Ihre Bedürfnisse</p>
+            </div>
+            <div class="service-cards">
+                <div class="service-card reveal-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/residential.jpg" alt="Baumservice für Privatkunden"
+                                data-i18n-attr="alt" data-i18n="service_residential"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/589840/pexels-photo-589840.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <h3 data-i18n="service_residential">Baumservice für Privatkunden</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3 data-i18n="service_residential">Baumservice für Privatkunden</h3>
+                            <p data-i18n="service_residential_desc">Professionelle Baumpflege für Hausbesitzer, von
+                                regelmäßiger Wartung bis zur Notfallentfernung.</p>
+                            <a href="#portfolio" class="learn-more" data-i18n="view_projects">Projekte ansehen</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card reveal-card delay-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/commercial.jpg" alt="Gewerbe- & Kommunalprojekte"
+                                data-i18n-attr="alt" data-i18n="service_commercial"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/2069425/pexels-photo-2069425.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <h3 data-i18n="service_commercial">Gewerbe- & Kommunalprojekte</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3 data-i18n="service_commercial">Gewerbe- & Kommunalprojekte</h3>
+                            <p data-i18n="service_commercial_desc">Großflächiges Baummanagement für Unternehmen, Städte
+                                und öffentliche Räume.</p>
+                            <a href="#portfolio" class="learn-more" data-i18n="view_projects">Projekte ansehen</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card reveal-card delay-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/forest.jpg" alt="Forstmanagement & Naturschutz" data-i18n-attr="alt"
+                                data-i18n="service_forest"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/640809/pexels-photo-640809.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <h3 data-i18n="service_forest">Forstmanagement & Naturschutz</h3>
+                        </div>
+                        <div class="card-back">
+                            <h3 data-i18n="service_forest">Forstmanagement & Naturschutz</h3>
+                            <p data-i18n="service_forest_desc">Nachhaltige Forstpraktiken zur Erhaltung und Verbesserung
+                                natürlicher Waldbestände.</p>
+                            <a href="#portfolio" class="learn-more" data-i18n="view_projects">Projekte ansehen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-projects">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="featured_projects">Ausgewählte Projekte</h2>
+                <p data-i18n="expertise_action">Sehen Sie unsere Expertise in Aktion</p>
+            </div>
+            <div class="projects-gallery">
+                <div class="project reveal-content">
+                    <div class="before-after-container">
+                        <div class="before-image">
+                            <img src="assets/images/project1-before.jpg" alt="Projekt Vorher"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <span class="label" data-i18n="before">Vorher</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="assets/images/project1-after.jpg" alt="Projekt Nachher"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <span class="label" data-i18n="after">Nachher</span>
+                        </div>
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="project-details">
+                        <h3 data-i18n="villa_project">Historische Villa Baumpflege</h3>
+                        <p data-i18n="villa_project_desc">Präzisionsentfernung einer 150 Jahre alten beschädigten Eiche
+                            bei gleichzeitiger Erhaltung der umgebenden Landschaft.</p>
+                    </div>
+                </div>
+
+                <div class="project reveal-content delay-1">
+                    <div class="before-after-container">
+                        <div class="before-image">
+                            <img src="assets/images/project2-before.jpg" alt="Projekt Vorher"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/460621/pexels-photo-460621.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <span class="label" data-i18n="before">Vorher</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="assets/images/project2-after.jpg" alt="Projekt Nachher"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/158028/bellingrath-gardens-alabama-landscape-scenic-158028.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <span class="label" data-i18n="after">Nachher</span>
+                        </div>
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="project-details">
+                        <h3 data-i18n="park_project">Münchner Stadtpark Revitalisierung</h3>
+                        <p data-i18n="park_project_desc">Selektive Entfernung erkrankter Bäume mit minimaler Störung
+                            öffentlicher Räume.</p>
+                    </div>
+                </div>
+
+                <div class="project reveal-content delay-2">
+                    <div class="before-after-container">
+                        <div class="before-image">
+                            <img src="assets/images/project3-before.jpg" alt="Projekt Vorher"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/5976812/pexels-photo-5976812.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <span class="label" data-i18n="before">Vorher</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="assets/images/project3-after.jpg" alt="Projekt Nachher"
+                                onerror="this.onerror=null; this.src='https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                            <span class="label" data-i18n="after">Nachher</span>
+                        </div>
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="project-details">
+                        <h3 data-i18n="woodland_project">Private Waldrestaurierung</h3>
+                        <p data-i18n="woodland_project_desc">Nachhaltige Bewirtschaftung eines von Käfern geschädigten
+                            Waldes mit natürlicher Regenerationsstrategie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expert Statement -->
+        <section class="expert-statement parallax-section">
+            <div class="parallax-background"></div>
+            <div class="statement-content reveal-content">
+                <h2 data-i18n="traditional_modern">Traditionelles Wissen trifft moderne Technik</h2>
+                <p data-i18n="approach_desc">Unser Ansatz verbindet Generationen bayerischer Forstwirtschaftsweisheit
+                    mit modernster Baumpflegewissenschaft und -ausrüstung und liefert Ergebnisse, die sowohl Tradition
+                    als auch Innovation respektieren.</p>
+            </div>
+        </section>
+
+        <!-- Equipment Showcase -->
+        <section class="equipment-showcase">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="equipment_title">Spezialisierte Ausrüstung</h2>
+                <p data-i18n="equipment_subtitle">Professionelle Werkzeuge für Präzisionsarbeit</p>
+            </div>
+            <div class="equipment-slider">
+                <div class="equipment-item">
+                    <img src="assets/images/equipment1.jpg" alt="Kletterausrüstung"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                    <h3 data-i18n="equipment_climbing">Fortschrittliche Klettersysteme</h3>
+                    <p data-i18n="equipment_climbing_desc">Spezialisiert für hohe heimische Bäume</p>
+                </div>
+                <div class="equipment-item">
+                    <img src="assets/images/equipment2.jpg" alt="Schneidegeräte"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/15766364/pexels-photo-15766364.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                    <h3 data-i18n="equipment_cutting">Präzisions-Schneidausrüstung</h3>
+                    <p data-i18n="equipment_cutting_desc">Für schwierige und technische Entfernungen</p>
+                </div>
+                <div class="equipment-item">
+                    <img src="assets/images/equipment3.jpg" alt="Holzverarbeitung"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                    <h3 data-i18n="equipment_processing">Umweltfreundliche Verarbeitung</h3>
+                    <p data-i18n="equipment_processing_desc">Nachhaltige Holzverarbeitungsmaschinen</p>
+                </div>
+                <div class="equipment-item">
+                    <img src="assets/images/equipment4.jpg" alt="Seilsysteme"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                    <h3 data-i18n="equipment_rigging">Fortschrittliche Seilsysteme</h3>
+                    <p data-i18n="equipment_rigging_desc">Für urbane und sensible Umgebungen</p>
+                </div>
+                <div class="equipment-item">
+                    <img src="assets/images/equipment5.jpg" alt="Sicherheitsausrüstung"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/1117214/pexels-photo-1117214.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                    <h3 data-i18n="equipment_safety">Umfassende Sicherheitssysteme</h3>
+                    <p data-i18n="equipment_safety_desc">Gewährleistung des Schutzes in allen Situationen</p>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Client Testimonial -->
+        <section class="testimonial">
+            <div class="testimonial-content reveal-content">
+                <blockquote data-i18n="testimonial_quote">
+                    Daniels Kombination aus traditionellem Forstwissen und modernen Techniken ermöglichte es uns, unsere
+                    historischen Eichenbäume zu retten und gleichzeitig die gefährlichen mit unglaublicher Präzision zu
+                    entfernen. Sein Team arbeitete mit Respekt für unser Grundstück und die umgebende Umwelt.
+                </blockquote>
+                <cite data-i18n="testimonial_author">— Familie Müller, Besitzer eines historischen Anwesens,
+                    München</cite>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content reveal-content">
+                <h2 data-i18n="cta_ready">Bereit, mit Bayerns führenden Baumspezialisten zu arbeiten?</h2>
+                <a href="#contact" class="cta-button" data-i18n="cta_assessment">Baumbegutachtung anfragen</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="about_title">Über Daniel Partsch</h2>
+                <p data-i18n="about_subtitle">Tradition, Expertise und Präzision</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal-content">
+                    <img src="assets/images/daniel-portrait.jpg" alt="Daniel Partsch"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                </div>
+                <div class="about-text reveal-content">
+                    <h3 data-i18n="about_heritage">Bayerisches Erbe in der Baumpflege</h3>
+                    <p data-i18n="about_heritage_desc1">Daniel Partsch repräsentiert die neueste Generation einer
+                        Familie mit tiefen Wurzeln in der bayerischen Forstwirtschaft. Durch die Kombination von
+                        traditionellem Wissen, das über Generationen weitergegeben wurde, mit moderner
+                        Baumpflegeausbildung bietet Daniel einen einzigartigen Ansatz zur Baumpflege, der sowohl das
+                        Erbe als auch die Innovation ehrt.</p>
+                    <p data-i18n="about_heritage_desc2">Sein spezialisiertes Wissen über lokale Baumarten, bayerische
+                        Vorschriften und nachhaltige Forstpraktiken stellt sicher, dass jedes Projekt mit technischer
+                        Perfektion, Umweltbewusstsein und authentischer bayerischer Zuverlässigkeit ausgeführt wird.</p>
+                    <div class="certifications">
+                        <h4 data-i18n="certifications">Zertifizierungen & Qualifikationen</h4>
+                        <ul>
+                            <li data-i18n="cert_1">Zertifizierter Arborist - Deutscher Forstverein</li>
+                            <li data-i18n="cert_2">Technischer Forstfachmann - Bayerische Landwirtschaftskammer</li>
+                            <li data-i18n="cert_3">Fortgeschrittene Sicherheitszertifizierung - European Tree Worker
+                            </li>
+                            <li data-i18n="cert_4">Nachhaltige Forstwirtschaft - Technische Universität München</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="heritage-comparison">
+                <div class="heritage-image reveal-content">
+                    <img src="assets/images/heritage-old.jpg" alt="Traditionelle Methoden"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800';">
+                    <h4 data-i18n="heritage_traditional">Traditionelle Methoden</h4>
+                </div>
+                <div class="plus-sign">+</div>
+                <div class="heritage-image reveal-content">
+                    <img src="assets/images/heritage-new.jpg" alt="Moderne Techniken"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                    <h4 data-i18n="heritage_modern">Moderne Techniken</h4>
+                </div>
+                <div class="equals-sign">=</div>
+                <div class="heritage-image reveal-content">
+                    <img src="assets/images/heritage-combined.jpg" alt="Der Partsch-Ansatz"
+                        onerror="this.onerror=null; this.src='https://images.pexels.com/photos/5967868/pexels-photo-5967868.jpeg?auto=compress&cs=tinysrgb&w=800';">
+                    <h4 data-i18n="heritage_combined">Der Partsch-Ansatz</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section (abbreviated) -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="portfolio_title">Unser Portfolio</h2>
+                <p data-i18n="portfolio_subtitle">Exzellenz in der Baumpflege in ganz Bayern</p>
+            </div>
+            <div class="portfolio-tabs">
+                <button class="tab-btn active" data-category="residential"
+                    data-i18n="tab_residential">Privatkunden</button>
+                <button class="tab-btn" data-category="commercial" data-i18n="tab_commercial">Gewerbe &
+                    Kommunal</button>
+                <button class="tab-btn" data-category="forest" data-i18n="tab_forest">Forstmanagement</button>
+            </div>
+            <div class="portfolio-grid" id="residential">
+                <!-- Case study content will be added with JavaScript -->
+            </div>
+            <div class="portfolio-grid hidden" id="commercial">
+                <!-- Case study content will be added with JavaScript -->
+            </div>
+            <div class="portfolio-grid hidden" id="forest">
+                <!-- Case study content will be added with JavaScript -->
+            </div>
+        </section>
+
+        <!-- Working Process -->
+        <section id="process" class="process-section">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="process_title">Unsere Arbeitsweise</h2>
+                <p data-i18n="process_subtitle">Ein methodischer Ansatz zur Baumpflege</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step reveal-content">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="process_1">Beratung & Begutachtung</h3>
+                        <p data-i18n="process_1_desc">Wir beginnen mit einer gründlichen Vor-Ort-Bewertung Ihrer Bäume,
+                            analysieren Risiken, Umweltfaktoren und behördliche Anforderungen.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-content">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="process_2">Strategische Planung</h3>
+                        <p data-i18n="process_2_desc">Wir entwickeln einen maßgeschneiderten Ansatz für Ihre
+                            spezifischen Bedürfnisse, bestimmen Ausrüstungsanforderungen, Sicherheitsprotokolle und
+                            Zeitplan.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-content">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="process_3">Professionelle Ausführung</h3>
+                        <p data-i18n="process_3_desc">Unser Team setzt den Plan mit Präzision, Fachwissen und ständiger
+                            Kommunikation um und passt sich bei Bedarf an die Bedingungen an.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-content">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-i18n="process_4">Umfassende Reinigung</h3>
+                        <p data-i18n="process_4_desc">Wir kümmern uns gründlich um alle Reste, bieten
+                            Holzverarbeitungsoptionen an und stellen den Ort in einen einwandfreien Zustand wieder her.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step reveal-content">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 data-i18n="process_5">Nachsorge & Zukunftsplanung</h3>
+                        <p data-i18n="process_5_desc">Wir geben Empfehlungen zur Neubepflanzung, Wartungspläne und
+                            Dokumentation für die langfristige Baumgesundheit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (abbreviated) -->
+        <section id="services" class="services-section">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="services_title">Unsere Leistungen</h2>
+                <p data-i18n="services_subtitle">Umfassende Baumpflegelösungen</p>
+            </div>
+            <div class="services-container">
+                <div class="service-category reveal-content">
+                    <h3 data-i18n="service_1">Präzise Baumfällung</h3>
+                    <ul data-i18n-list="service_1_items">
+                        <li>Technische Schwierigkeitsbewertung</li>
+                        <li>Maßgeschneiderte Entfernungsplanung</li>
+                        <li>Sektionsweise Fällung</li>
+                        <li>Kranunterstützte Entfernung</li>
+                        <li>Notfallreaktion</li>
+                        <li>Vollständige Stubbentfernung</li>
+                    </ul>
+                </div>
+                <div class="service-category reveal-content">
+                    <h3 data-i18n="service_2">Baumpflege & -wartung</h3>
+                    <ul data-i18n-list="service_2_items">
+                        <li>Gesundheitsbewertung</li>
+                        <li>Struktureller Schnitt</li>
+                        <li>Krankheitsbehandlung</li>
+                        <li>Sturmschadenminderung</li>
+                        <li>Wurzelsystemmanagement</li>
+                        <li>Wachstumskontrolle</li>
+                    </ul>
+                </div>
+                <div class="service-category reveal-content">
+                    <h3 data-i18n="service_3">Spezialisierte Baumpflegedienste</h3>
+                    <ul data-i18n-list="service_3_items">
+                        <li>Erhaltung alter Bäume</li>
+                        <li>Ökologische Habitatschaffung</li>
+                        <li>Baumverpflanzung</li>
+                        <li>Künstlerische Baumgestaltung</li>
+                        <li>Blitzschutz</li>
+                        <li>Bodenmanagement</li>
+                    </ul>
+                </div>
+                <div class="service-category reveal-content">
+                    <h3 data-i18n="service_4">Forstmanagement</h3>
+                    <ul data-i18n-list="service_4_items">
+                        <li>Private Waldbewertung</li>
+                        <li>Nachhaltige Ernte</li>
+                        <li>Regenerationsstrategien</li>
+                        <li>Zugangsverbesserung</li>
+                        <li>Holzwertoptimierung</li>
+                        <li>Naturschutzplanung</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Section -->
+        <section id="sustainability" class="sustainability-section">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="sustainability_title">Unser Engagement für Nachhaltigkeit</h2>
+                <p data-i18n="sustainability_subtitle">Umweltverantwortung in jedem Projekt</p>
+            </div>
+            <div class="sustainability-stats">
+                <div class="stat-item reveal-content">
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-label" data-i18n="stat_1_label">Holzmaterial recycelt (%)</div>
+                </div>
+                <div class="stat-item reveal-content">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label" data-i18n="stat_2_label">Bäume jährlich nachgepflanzt</div>
+                </div>
+                <div class="stat-item reveal-content">
+                    <div class="stat-number" data-count="40">0</div>
+                    <div class="stat-label" data-i18n="stat_3_label">CO₂-Fußabdruck-Reduktion (%)</div>
+                </div>
+                <div class="stat-item reveal-content">
+                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-label" data-i18n="stat_4_label">Lokale Ökosystem-Projekte</div>
+                </div>
+            </div>
+            <div class="sustainability-content reveal-content">
+                <p data-i18n="sustainability_desc1">Bei Baumfällung Partsch Junior ist Nachhaltigkeit nicht nur ein
+                    Schlagwort - es ist ein grundlegendes Prinzip, das alles leitet, was wir tun. Unser umfassender
+                    Ansatz umfasst Holzrecycling-Initiativen, Strategien zur Reduzierung des CO₂-Fußabdrucks,
+                    Wiederaufforstungsverpflichtungen und Erhaltung von Wildtierlebensräumen.</p>
+                <p data-i18n="sustainability_desc2">Wir glauben, dass verantwortungsvolles Baummanagement zu gesünderen
+                    Ökosystemen und einer nachhaltigeren Zukunft für Bayern beiträgt.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-title reveal-content">
+                <h2 data-i18n="contact_title">Kontakt</h2>
+                <p data-i18n="contact_subtitle">Bereit, über Ihre Baumpflegebedürfnisse zu sprechen?</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form reveal-content">
+                    <form id="tree-assessment-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form_name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form_email">E-Mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form_phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" data-i18n="form_service">Gewünschte Leistung</label>
+                            <select id="service" name="service">
+                                <option value="assessment" data-i18n="form_service_assessment">Baumbegutachtung</option>
+                                <option value="removal" data-i18n="form_service_removal">Baumfällung</option>
+                                <option value="maintenance" data-i18n="form_service_maintenance">Baumpflege</option>
+                                <option value="emergency" data-i18n="form_service_emergency">Notfalldienst</option>
+                                <option value="forest" data-i18n="form_service_forest">Forstmanagement</option>
+                                <option value="other" data-i18n="form_service_other">Sonstiges</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="form_message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-i18n="form_submit">Begutachtung planen</button>
+                    </form>
+                </div>
+                <div class="contact-info reveal-content">
+                    <h3 data-i18n="get_in_touch">Kontaktieren Sie uns</h3>
+                    <p><i class="fas fa-phone"></i> +49 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@partsch-tree.de</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bayern, Deutschland</p>
+                    <div class="emergency-contact">
+                        <h4 data-i18n="emergency_services">Notfall-Baumdienste</h4>
+                        <p data-i18n="emergency_desc">Rund um die Uhr verfügbar für dringende Situationen</p>
+                        <a href="tel:+491234567891" class="emergency-btn"
+                            data-i18n="emergency_hotline">Notfall-Hotline</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Baumfällung Partsch Junior</h2>
+                <p data-i18n="footer_desc">Bayerns führende Baumspezialisten</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h3 data-i18n="footer_services">Leistungen</h3>
+                    <ul>
+                        <li><a href="#services" data-i18n="footer_tree_removal">Baumfällung</a></li>
+                        <li><a href="#services" data-i18n="footer_tree_maintenance">Baumpflege</a></li>
+                        <li><a href="#services" data-i18n="footer_specialized_services">Spezialdienste</a></li>
+                        <li><a href="#services" data-i18n="footer_forest_management">Forstmanagement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footer_company">Unternehmen</h3>
+                    <ul>
+                        <li><a href="#about" data-i18n="footer_about">Über uns</a></li>
+                        <li><a href="#portfolio" data-i18n="footer_portfolio">Portfolio</a></li>
+                        <li><a href="#sustainability" data-i18n="footer_sustainability">Nachhaltigkeit</a></li>
+                        <li><a href="#contact" data-i18n="footer_contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footer_legal">Rechtliches</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_privacy">Datenschutz</a></li>
+                        <li><a href="#" data-i18n="footer_terms">Nutzungsbedingungen</a></li>
+                        <li><a href="#" data-i18n="footer_imprint">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_copyright">© 2025 Baumfällung Partsch Junior. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/path-checker.js"></script>
+    <script src="scripts/image-fix.js"></script>
+</body>
+
+</html>
