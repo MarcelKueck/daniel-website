@@ -42,6 +42,22 @@
     justify-content: center;
     color: white;
     font-style: italic;
+    position: relative;
+}
+
+/* Show a retry button on failed images */
+.image-load-failed::after {
+    content: attr(alt);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 /* Make sure before/after containers maintain proper height even without images */
@@ -64,10 +80,18 @@
     width: 6px !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 10;
+    cursor: ew-resize;
 }
 
 .slider-handle::before {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: ew-resize;
+}
+
+/* Focus indicator for keyboard navigation */
+.slider-handle:focus {
+    outline: 2px solid var(--primary-dark-green);
+    outline-offset: 2px;
 }
 
 /* Make the before/after containers responsive */
@@ -75,4 +99,74 @@
     .before-after-container {
         min-height: 180px;
     }
+
+    /* Make touch targets larger on mobile */
+    .slider-handle::before {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Lazy loading images */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img[data-src][src] {
+    opacity: 1;
+}
+
+/* Form validation styling */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    min-height: 1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.error-message.active {
+    opacity: 1;
+}
+
+input.error,
+select.error,
+textarea.error {
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 0 1px #e74c3c !important;
+}
+
+/* Style for form during submission */
+form.submitting {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+form.submitting::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5) url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2244%22%20height%3D%2244%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20stroke%3D%22%23184A2C%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%2222%22%20r%3D%221%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%220s%22%20dur%3D%221.8s%22%20values%3D%221%3B%2020%22%20calcMode%3D%22spline%22%20keyTimes%3D%220%3B%201%22%20keySplines%3D%220.165%2C%200.84%2C%200.44%2C%201%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22stroke-opacity%22%20begin%3D%220s%22%20dur%3D%221.8s%22%20values%3D%221%3B%200%22%20calcMode%3D%22spline%22%20keyTimes%3D%220%3B%201%22%20keySplines%3D%220.3%2C%200.61%2C%200.355%2C%201%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%2222%22%20r%3D%221%22%3E%3Canimate%20attributeName%3D%22r%22%20begin%3D%22-0.9s%22%20dur%3D%221.8s%22%20values%3D%221%3B%2020%22%20calcMode%3D%22spline%22%20keyTimes%3D%220%3B%201%22%20keySplines%3D%220.165%2C%200.84%2C%200.44%2C%201%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22stroke-opacity%22%20begin%3D%22-0.9s%22%20dur%3D%221.8s%22%20values%3D%221%3B%200%22%20calcMode%3D%22spline%22%20keyTimes%3D%220%3B%201%22%20keySplines%3D%220.3%2C%200.61%2C%200.355%2C%201%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E') center no-repeat;
+    z-index: 2;
+}
+
+/* Accessibility focus styles */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+    outline: 2px solid var(--primary-dark-green);
+    outline-offset: 2px;
 }
